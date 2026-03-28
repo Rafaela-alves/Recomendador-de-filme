@@ -1,24 +1,27 @@
+/* Definindo o estilo básico para o HTML e BODY */
 html, body {
-    margin: 30px;
-    padding: 10;
-    background-color: #927ebf;
-  }
-  
-  canvas {
-    display: block;
-    filter: drop-shadow(10px 10px 20px rgb(960, 680, 153));
-    border-radius: 10px;
-  }
+  margin: 30px;
+  padding: 10px;
+  background-color: #927ebf; /* Cor de fundo mais suave */
+}
 
+/* Estilo para o canvas */
+canvas {
+  display: block;
+  filter: drop-shadow(10px 10px 20px rgb(96, 68, 153)); /* Corrigido a cor no filtro */
+  border-radius: 10px;
+}
+
+/* Estilo para o botão CTA */
 .cta {
   display: flex;
-  padding: 11px 33px;
+  padding: 12px 35px; /* Ajustado o padding para ficar mais espaçado */
   text-decoration: none;
-  font-size: 25px;
+  font-size: 24px; /* Ajustado o tamanho da fonte */
   color: wheat;
   background: #6225e6;
-  transition: 1s;
-  box-shadow: 6px 6px 0 black;
+  transition: 0.5s;
+  box-shadow: 6px 6px 10px black; /* Ajustado o sombreamento */
   transform: skewX(-15deg);
   border: none;
   cursor: pointer;
@@ -28,14 +31,15 @@ html, body {
   outline: none;
 }
 
+/* Efeito de hover para o botão CTA */
 .cta:hover {
   transition: 0.5s;
-  box-shadow: 10px 10px 0 #fbc638;
+  box-shadow: 10px 10px 15px #fbc638; /* Sombra mais suave e visível */
 }
 
 .cta .second {
   transition: 0.5s;
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .cta:hover .second {
@@ -43,10 +47,12 @@ html, body {
   margin-right: 45px;
 }
 
+/* Estilo para a primeira parte do texto dentro do botão */
 .span {
   transform: skewX(15deg);
 }
 
+/* Estilo para o ícone de seta (segunda parte do botão) */
 .second {
   width: 20px;
   margin-left: 30px;
@@ -54,16 +60,19 @@ html, body {
   top: 12%;
 }
 
+/* Animação da primeira parte da seta */
 .one {
   transition: 0.4s;
   transform: translateX(-60%);
 }
 
+/* Animação da segunda parte da seta */
 .two {
   transition: 0.5s;
   transform: translateX(-30%);
 }
 
+/* Efeito de hover para a terceira parte da seta */
 .cta:hover .three {
   animation: color_anim 1s infinite 0.2s;
 }
@@ -78,13 +87,14 @@ html, body {
   animation: color_anim 1s infinite 0.4s;
 }
 
+/* Definindo a animação de cores */
 @keyframes color_anim {
   0% {
     fill: white;
   }
 
   50% {
-    fill: #fbc638;
+    fill: #fbc638; /* Cor de destaque */
   }
 
   100% {
